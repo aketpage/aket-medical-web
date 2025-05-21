@@ -1,5 +1,6 @@
 import React from "react";
+import "../styles/about.css";
 
 export const About = () => {
-  return <div>About Page</div>;
+  return <div className="background">About Page</div>;
 };

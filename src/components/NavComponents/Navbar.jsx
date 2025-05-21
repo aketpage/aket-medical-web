@@ -1,9 +1,27 @@
 import React from "react";
-import { Link, NavLink } from "react-router";
+import "../../styles/NavBar.modules.css";
+import { MobileNavigation } from "./MobileNavigation";
+import { Navigation } from "./Navigation";
 
 export const Navbar = () => {
   return (
-    <nav
+    <>
+      <div className="logo">
+        <div className="serviceLogo">
+          <p>Aketzali</p>
+          <p>Logo</p>
+        </div>
+      </div>
+      <div className="NavBar">
+        <Navigation />
+        <MobileNavigation />
+      </div>
+    </>
+  );
+};
+
+{
+  /*<nav
       className="navbar navbar-expand-lg navbar-light"
       style={{ backgroundColor: "#e3f2fd" }}
     >
@@ -45,6 +63,5 @@ export const Navbar = () => {
           </ul>
         </div>
       </div>
-    </nav>
-  );
-};
+    </nav>*/
+}

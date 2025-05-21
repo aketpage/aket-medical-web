@@ -1,0 +1,150 @@
+.NavBar {
+  background: #18181800;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  z-index: auto;
+  opacity: 0.9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #260950;
+}
+
+.logo {
+  position: absolute;
+  color: aliceblue;
+  height: 90px;
+  width: 18%;
+  z-index: 1;
+  background-color: white;
+  border-bottom-right-radius: 60px;
+  border: 2px solid whitesmoke;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceLogo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.serviceLogo p {
+  color: #8c1cd1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NavBar nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.NavBar nav ul li {
+  display: inline-block;
+  margin: 20px;
+}
+
+.NavBar nav ul li a {
+  text-decoration: none;
+  color: rgba(244, 246, 247);
+}
+/*50x60x54*/
+.hover-underline {
+  font-size: 2rem;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+  font-size: medium;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(to right, #62bcf0, #f0f1f3);
+  bottom: -3px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+  top: -3px;
+  transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+  transform: scaleX(1);
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 45px;
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 23px;
+}
+
+p {
+  font-weight: 500;
+  font-size: 21px;
+}
+
+a {
+  font-weight: 900;
+  font-size: 16px;
+}
+
+.movileNavigation {
+  display: none;
+}
+
+.navigation {
+}
+
+@media (max-width: 990px) {
+  .navigation {
+    display: none;
+  }
+
+  .movileNavigation {
+    display: flex;
+    align-items: center;
+  }
+
+  .hamburger {
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+  }
+  .unOrderList {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    width: 100%;
+    background: #181818;
+  }
+
+  .listItem {
+    padding-left: 5%;
+  }
+
+  .listItem a:hover {
+    border-bottom: 5px solid #8c1cd1;
+    color: rgba(0, 255, 255, 0.514);
+    transition: 0.2s;
+  }
+}
